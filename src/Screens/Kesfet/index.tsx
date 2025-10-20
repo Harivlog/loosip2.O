@@ -79,6 +79,7 @@ const Kesfet = () => {
         onPressHeart={() => console.log('heart')}
         onPressNotification={() => console.log('notifications')}
         onPressMessage={() => console.log('message')}
+        isSearch={false}
       />
 
       <FlatList

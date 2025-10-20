@@ -27,9 +27,12 @@ const Login = () => {
     const [isErrorShow, setIsErrorShow] = useState(false)
 
     const handleLogin = ()=>{
-       if(email !== '123@gmail.com' || password !== '123456'){
-         setIsErrorShow(true)
-       }
+      //  if(email !== '123@gmail.com' || password !== '123456'){
+        //  setIsErrorShow(true)
+      //  }
+      //  else{
+        navigation.navigate('BottomTab')
+      //  }
     }
   return (
     <BackgroundWrapper>
@@ -77,7 +80,7 @@ const Login = () => {
               onChangeText={setPassword}
               secureTextEntry={isPassVisible}
               value={password}
-              addRight={!isPassVisible ? <ICONS.hide /> : <ICONS.show />}
+              addRight={!isPassVisible ? <ICONS.show /> : <ICONS.hide />  }
               onPress={() => setPassVisible(!isPassVisible)}
               isFocus={isPassFocused}
               onBlur={() => setIsPassFocused(false)}
@@ -87,7 +90,8 @@ const Login = () => {
         <PrimaryButton
        title={'Giriş Yap'}
        onPress={()=> handleLogin()}
-       isContinue={email?.length > 3 && password?.length > 3}
+      //  isContinue={email?.length > 3 && password?.length > 3}
+      isContinue={true}
        style={{
         width : wp(90),
         marginTop : hp(2)

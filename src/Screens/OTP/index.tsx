@@ -23,14 +23,14 @@ const OTP = () => {
   const [errorText, setErrorText] = useState('')
   const handleForgetPass = () => {
     // navigation.navigate('OTP');
-    const otpText = getOtpInput?.state?.otpText.join('');
-    if(otpText != 1234){
-        console.log(otpText)
-      setIsErrorShow(true)
-    }
-    else{
+    // const otpText = getOtpInput?.state?.otpText.join('');
+    // if(otpText != 1234){
+    //     console.log(otpText)
+    //   setIsErrorShow(true)
+    // }
+    // else{
         navigation.navigate('ResetPassword')
-    }
+    // }
     
 
   };
@@ -127,7 +127,8 @@ const OTP = () => {
             <PrimaryButton
               title={'Şifreni Değiştir'}
               onPress={() => handleForgetPass()}
-              isContinue={getOtpInput?.state?.otpText.join('')?.length === 4}
+              // isContinue={getOtpInput?.state?.otpText.join('')?.length === 4}
+              isContinue={true}
               style={{
                 width: wp(90),
                 marginTop: hp(3),
