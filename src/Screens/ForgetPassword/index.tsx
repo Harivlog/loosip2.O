@@ -65,7 +65,8 @@ const ForgetPassword = () => {
         <PrimaryButton
        title={'Sıfırlama Bağlantısı Gönder '}
        onPress={()=> handleForgetPass()}
-       isContinue={email?.length > 3}
+      //  isContinue={email?.length > 3}
+      isContinue={true}
        style={{
         width : wp(90),
         marginTop : hp(2)

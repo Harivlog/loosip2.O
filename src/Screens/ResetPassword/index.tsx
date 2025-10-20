@@ -8,8 +8,6 @@ import Reuse_TextInput from '../../Components/ReuseTextInput';
 import { style } from './style';
 import { ICONS } from '../../../Assets';
 import PrimaryButton from '../../Components/PrimaryButton';
-import { COLORS } from '../../Theme';
-import AuthTextFooter from '../../Components/AuthFooter';
 import * as Progress from 'react-native-progress';
 import ErrorToast from '../../Components/Errortoast';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -89,7 +87,9 @@ const ResetPassword = () => {
               onChangeText={setPassword}
               secureTextEntry={isPassVisible}
               value={password}
-              addRight={!isPassVisible ? <ICONS.hide /> : <ICONS.show />}
+              // addRight={!isPassVisible ? <ICONS.hide /> : <ICONS.show />}
+                            addRight={!isPassVisible ? <ICONS.show /> : <ICONS.hide />  }
+              
               onPress={() => setPassVisible(!isPassVisible)}
               onFocus={() => setIsPassFocus(true)}
               onBlur={() => setIsPassFocus(false)}
@@ -102,7 +102,9 @@ const ResetPassword = () => {
               onChangeText={setConfirmPassword}
               secureTextEntry={isConfirmPassVisible}
               value={confirmPassword}
-              addRight={!isConfirmPassVisible ? <ICONS.hide /> : <ICONS.show />}
+              // addRight={!isConfirmPassVisible ? <ICONS.hide /> : <ICONS.show />}
+                            addRight={!isPassVisible ? <ICONS.show /> : <ICONS.hide />  }
+              
               onPress={() => setConfirmPassVisible(!isConfirmPassVisible)}
               onFocus={() => setConfirmPassFocus(true)}
               onBlur={() => setConfirmPassFocus(false)}
@@ -143,7 +145,8 @@ const ResetPassword = () => {
             <PrimaryButton
               title={'Parolayı Kaydet'}
               onPress={handleSave}
-              isContinue={password?.length > 3}
+              // isContinue={password?.length > 3}
+              isContinue={true}
               style={{ width: wp(90), marginTop: hp(3) }}
             />
 

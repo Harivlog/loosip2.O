@@ -27,6 +27,19 @@ export {default as plus1} from './plus1.svg';
 export {default as disk} from './disk.svg';
 export {default as VolumeHigh} from './VolumeHigh.svg';
 export {default as VolumeOff} from './VolumeOff.svg';
+export {default as search2} from './Search2.svg';
+export {default as playSquare} from './playSquare.svg';
+export {default as videoRecord} from './videoRecord.svg';
+export {default as videoRecorder} from './videoRecorder.svg';
+export {default as lock} from './Lock.svg';
+export {default as rightArrow} from './primary-shape.svg';
+
+
+
+
+
+
+
 
 
 

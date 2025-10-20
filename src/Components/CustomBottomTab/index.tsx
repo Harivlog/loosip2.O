@@ -6,13 +6,27 @@ import { NavigationContainer } from "@react-navigation/native";
 import { COLORS, TYPOGRAPHY } from "../../Theme";
 import { ICONS } from "../../../Assets";
 import { hp, wp } from "../../Theme/utiles";
+import LinearGradient from "react-native-linear-gradient";
 
 const Tab = createBottomTabNavigator();
 
 
 export function CustomTabBar({ state, descriptors, navigation }: any) {
     return (
-        <View style={styles.tabContainer}>
+       <View style={{
+        backgroundColor : COLORS.BG_COLOR
+       }}>
+         <LinearGradient 
+          colors={["rgba(13,13,32,1)", "rgba(21,21,52,1)"]}
+          start={{ x: 0, y: 1 }}
+          end={{ x: 0, y: 0 }}
+          style={{
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
+            
+          }}
+         >
+         <View style={styles.tabContainer}>
             <View style={{
                 flexDirection: "row",
                 justifyContent: "space-around",
@@ -68,7 +82,7 @@ export function CustomTabBar({ state, descriptors, navigation }: any) {
                                 route?.name === 'Keşfet' ? <ICONS.home /> :
                                     route.name === "Gündem" ? <ICONS.search /> :
                                         route.name === "VideoCall" ? <ICONS.video /> :
-                                            <ICONS.profile />
+                                            <ICONS.profile fill={isFocused ? COLORS.WHITE : COLORS.GRAY} />
                             }
 
 
@@ -80,19 +94,20 @@ export function CustomTabBar({ state, descriptors, navigation }: any) {
                 })}
             </View>
         </View>
+
+         </LinearGradient>
+       </View>
     );
 }
 
 const styles = StyleSheet.create({
-    screen: { flex: 1, alignItems: "center", justifyContent: "center" },
+    screen: { flex: 1, alignItems: "center", justifyContent: "center",backgroundColor : 'blue' },
     tabContainer: {
       
-        backgroundColor: "#151032",
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
         height: 100,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+
 
     },
     tabButton: {
