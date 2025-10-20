@@ -47,6 +47,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Loosip needs access to your camera to take profile pictures and capture images for upload posts in the app..</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Loosip needs access to your photo library to select profile pictures and upload images for creating posts in the app.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-Black.ttf</string>

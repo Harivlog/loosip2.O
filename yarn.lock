@@ -3127,6 +3127,7 @@ __metadata:
     prettier: 2.8.8
     react: 18.3.1
     react-native: 0.75.4
+    react-native-image-crop-picker: ^0.51.0
     react-native-keyboard-aware-scroll-view: ^0.9.5
     react-native-linear-gradient: ^2.8.3
     react-native-otp-textinput: ^1.1.7
@@ -8399,6 +8400,16 @@ __metadata:
   version: 19.2.0
   resolution: "react-is@npm:19.2.0"
   checksum: 9a23e1c2d0bbc13b383bc59a05f54e6eb95dd87e01aec8aa92a88618364b7b0ee8a5b057ad813cf61e2f7ae7d24503b624706acb609d07c54754e5ad2c522568
+  languageName: node
+  linkType: hard
+
+"react-native-image-crop-picker@npm:^0.51.0":
+  version: 0.51.0
+  resolution: "react-native-image-crop-picker@npm:0.51.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 791254bb07e6acca551933bde43f745e97dbe0ec60e37219d952a49227f3214d58e3e6f310340979e3670b6650a21ca8da5a865c66effe1e9d35ac0aa6b1f6ba
   languageName: node
   linkType: hard
 

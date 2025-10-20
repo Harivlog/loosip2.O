@@ -29,7 +29,7 @@ const ProfileCompletion = () => {
 
 
   const handleLogin = () => {
-   navigation.navigate('BottomTab')
+   navigation.navigate('Login')
   }
   return (
     <BackgroundWrapper>
@@ -93,7 +93,8 @@ const ProfileCompletion = () => {
               <PrimaryButton
                 title={'Tamamla'}
                 onPress={() => handleLogin()}
-                isContinue={userEndName?.length > 3 && userName?.length > 3}
+                // isContinue={userEndName?.length > 3 && userName?.length > 3}
+                isContinue={true}
                 style={{
                   width: wp(90),
                   marginTop: hp(2)
@@ -102,7 +103,9 @@ const ProfileCompletion = () => {
               <TouchableOpacity style={{
                 alignSelf : 'center',
                 marginTop : hp(2)
-              }}>
+              }}
+              onPress={()=> navigation.navigate('Login')}
+              >
                 <Text style={style.linkText}>Şimdilik Atla</Text>
               </TouchableOpacity>
              
