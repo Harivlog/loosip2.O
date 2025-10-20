@@ -35,6 +35,7 @@ const Stack = () => {
       <stack.Screen name="SuccessMessage" component={SuccessMessage} />
       <stack.Screen name="ProfileCompletion" component={ProfileCompletion} /> */}
       <stack.Screen name='BottomTab' component={BottomTab}/>
+      
 
 
 

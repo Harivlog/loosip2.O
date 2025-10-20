@@ -79,7 +79,9 @@ const SignUp = () => {
                   onChangeText={setPassword}
                   secureTextEntry={isPassVisible}
                   value={password}
-                  addRight={!isPassVisible ? <ICONS.hide /> : <ICONS.show />}
+                  // addRight={!isPassVisible ? <ICONS.hide /> : <ICONS.show />}
+                                addRight={!isPassVisible ? <ICONS.show /> : <ICONS.hide />  }
+                  
                   onPress={() => setPassVisible(!isPassVisible)}
                   isFocus={isPassFocused}
                   onBlur={() => setIsPassFocused(false)}
@@ -114,7 +116,8 @@ const SignUp = () => {
               <PrimaryButton
                 title={'Giriş Yap'}
                 onPress={() => handleLogin()}
-                isContinue={email?.length > 3 && password?.length > 3 && isMatchedName}
+                // isContinue={email?.length > 3 && password?.length > 3 && isMatchedName}
+                isContinue={true}
                 style={{
                   width: wp(90),
                   marginTop: hp(2)
@@ -128,7 +131,7 @@ const SignUp = () => {
               title={'Hesabın var mı?'}
               screenName={'Giriş Yap'}
               navigation={() => {
-                navigation.navigate('Signup')
+                navigation.navigate('Login')
               }}
             />
 
